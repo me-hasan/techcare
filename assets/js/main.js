@@ -80,8 +80,8 @@ function logoMarkup(dark) {
     '</span>' +
     '<span class="leading-tight">' +
     '<span class="block text-lg font-extrabold tracking-tight ' + (dark ? 'text-ink' : 'text-white') + '">' +
-    '<span data-bn="টেক" data-en="TECH"></span> <span class="text-brand-600" data-bn="কেয়ার" data-en="CARE"></span></span>' +
-    '<span class="block text-[10px] font-medium uppercase tracking-[0.18em] ' + (dark ? 'text-ink-400' : 'text-white/55') + '" data-bn="মোবাইল সার্ভিসিং ট্রেনিং" data-en="Mobile Servicing Training"></span>' +
+    '<span class="text-brand-600" data-bn="টেক" data-en="TECH"></span> <span class="' + (dark ? 'text-ink' : 'text-white') + '" data-bn="কেয়ার" data-en="CARE"></span></span>' +
+    '<span class="block text-[10px] font-medium uppercase tracking-[0.18em] ' + (dark ? 'text-ink-400' : 'text-white/55') + '" data-bn="মোবাইল সার্ভিসিং ট্রেনিং সেন্টার" data-en="Mobile Servicing Training Center"></span>' +
     '</span></a>'
   );
 }
@@ -112,7 +112,7 @@ function headerMarkup() {
     '</div></div>' +
 
     /* ---- main nav ---- */
-    '<header id="tcHeader" class="sticky top-0 z-50 bg-ink/95 backdrop-blur border-b border-white/10">' +
+    '<header id="tcHeader" class="bg-ink/95 backdrop-blur border-b border-white/10">' +
     '<div class="container mx-auto max-w-8xl px-4 lg:px-8">' +
     '<div class="flex items-center justify-between gap-4 h-[74px]">' +
     logoMarkup(false) +
