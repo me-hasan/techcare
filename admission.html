@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>অনলাইন ভর্তি | Admission – টেক কেয়ার Tech Care</title>
+<meta name="description" content="Tech Care online admission form — reserve your seat for mobile servicing software, hardware, chip level and business courses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind.config.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-ink antialiased">
+
+<div id="site-header"></div>
+
+<!-- ============ PAGE HEAD ============ -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <div class="absolute inset-0 bg-grid opacity-70"></div>
+  <div class="absolute -top-28 right-0 w-96 h-96 rounded-full bg-brand-600/25 blur-3xl"></div>
+  <div class="relative container mx-auto max-w-8xl px-4 lg:px-8 py-14 lg:py-16">
+    <nav class="flex items-center gap-2 text-xs text-white/50">
+      <a href="index.html" class="hover:text-brand-400" data-bn="হোম" data-en="Home"></a>
+      <span>/</span>
+      <span class="text-white/80" data-bn="অনলাইন ভর্তি" data-en="Admission"></span>
+    </nav>
+    <h1 class="mt-5 text-3xl lg:text-5xl font-extrabold" data-bn="অনলাইন ভর্তি ফরম" data-en="Online Admission Form"></h1>
+    <p class="mt-4 text-white/65 max-w-2xl leading-relaxed"
+       data-bn="নিচের ফরমটি পূরণ করুন। আমাদের কাউন্সিলর ২৪ ঘণ্টার মধ্যে কল করে আপনার ব্যাচ, ক্লাসের সময় ও ফি সংক্রান্ত সব তথ্য নিশ্চিত করবেন।"
+       data-en="Fill in the form below. Our counselor will call you within 24 hours to confirm your batch, class timing and fee details."></p>
+  </div>
+</section>
+
+<!-- ============ FORM + SIDEBAR ============ -->
+<section class="py-16 lg:py-20">
+  <div class="container mx-auto max-w-8xl px-4 lg:px-8 grid gap-10 lg:grid-cols-[1.55fr_1fr] items-start">
+
+    <form class="tc-form reveal rounded-2xl border border-black/10 bg-white p-6 lg:p-9 shadow-card grid gap-5 sm:grid-cols-2"
+          data-success-bn="আপনার ভর্তি আবেদন সফলভাবে জমা হয়েছে। কাউন্সিলর শীঘ্রই কল করবেন।"
+          data-success-en="Your admission application was submitted successfully. Our counselor will call you shortly.">
+
+      <div class="sm:col-span-2">
+        <h2 class="text-xl font-extrabold text-ink" data-bn="শিক্ষার্থীর তথ্য" data-en="Student information"></h2>
+        <p class="mt-1 text-sm text-ink-400" data-bn="* চিহ্নিত ঘরগুলো অবশ্যই পূরণ করতে হবে।" data-en="Fields marked * are mandatory."></p>
+      </div>
+
+      <div>
+        <label class="tc-label"><span data-bn="পুরো নাম" data-en="Full name"></span> <span class="text-brand-600">*</span></label>
+        <input required type="text" class="tc-input" data-ph-bn="যেমন: মো. রাকিব হাসান" data-ph-en="e.g. Md. Rakib Hasan">
+      </div>
+      <div>
+        <label class="tc-label"><span data-bn="মোবাইল নম্বর" data-en="Mobile number"></span> <span class="text-brand-600">*</span></label>
+        <input required type="tel" class="tc-input" data-ph-bn="০১৭xxxxxxxx" data-ph-en="017xxxxxxxx">
+      </div>
+      <div>
+        <label class="tc-label" data-bn="ইমেইল (ঐচ্ছিক)" data-en="Email (optional)"></label>
+        <input type="email" class="tc-input" data-ph-bn="you@example.com" data-ph-en="you@example.com">
+      </div>
+      <div>
+        <label class="tc-label" data-bn="জন্ম তারিখ (ঐচ্ছিক)" data-en="Date of birth (optional)"></label>
+        <input type="date" class="tc-input">
+      </div>
+      <div>
+        <label class="tc-label"><span data-bn="আগ্রহী কোর্স" data-en="Interested course"></span> <span class="text-brand-600">*</span></label>
+        <select required data-course-select class="tc-input"></select>
+      </div>
+      <div>
+        <label class="tc-label"><span data-bn="পছন্দের ক্লাস স্লট" data-en="Preferred class slot"></span> <span class="text-brand-600">*</span></label>
+        <select required class="tc-input">
+          <option value="" data-bn="স্লট নির্বাচন করুন" data-en="Select a slot"></option>
+          <option value="morning" data-bn="সকাল (৯টা - ১২টা)" data-en="Morning (9 AM - 12 PM)"></option>
+          <option value="afternoon" data-bn="দুপুর (১২টা - ৪টা)" data-en="Afternoon (12 PM - 4 PM)"></option>
+          <option value="evening" data-bn="সন্ধ্যা (৪টা - ৮টা)" data-en="Evening (4 PM - 8 PM)"></option>
+        </select>
+      </div>
+
+      <div class="sm:col-span-2 mt-2">
+        <h2 class="text-xl font-extrabold text-ink" data-bn="শিক্ষাগত ও ঠিকানা" data-en="Education and address"></h2>
+      </div>
+
+      <div>
+        <label class="tc-label" data-bn="সর্বশেষ শিক্ষাগত যোগ্যতা" data-en="Last education"></label>
+        <select class="tc-input">
+          <option value="" data-bn="নির্বাচন করুন" data-en="Select"></option>
+          <option value="ssc" data-bn="এসএসসি / সমমান" data-en="SSC / equivalent"></option>
+          <option value="hsc" data-bn="এইচএসসি / সমমান" data-en="HSC / equivalent"></option>
+          <option value="honours" data-bn="স্নাতক / সমমান" data-en="Bachelor / equivalent"></option>
+          <option value="other" data-bn="অন্য" data-en="Other"></option>
+        </select>
+      </div>
+      <div>
+        <label class="tc-label" data-bn="পেশা" data-en="Occupation"></label>
+        <select class="tc-input">
+          <option value="" data-bn="নির্বাচন করুন" data-en="Select"></option>
+          <option value="student" data-bn="শিক্ষার্থী" data-en="Student"></option>
+          <option value="job" data-bn="চাকরিজীবী" data-en="Job holder"></option>
+          <option value="business" data-bn="ব্যবসায়ী" data-en="Business owner"></option>
+          <option value="none" data-bn="কাজ করছি না" data-en="Not working"></option>
+        </select>
+      </div>
+      <div class="sm:col-span-2">
+        <label class="tc-label" data-bn="ঠিকানা" data-en="Address"></label>
+        <input type="text" class="tc-input" data-ph-bn="গ্রাম/এলাকা, উপজেলা, জেলা" data-ph-en="Area, upazila, district">
+      </div>
+
+      <div class="sm:col-span-2">
+        <label class="tc-label" data-bn="কিছু জানার থাকলে লিখুন" data-en="Anything you want to ask"></label>
+        <textarea rows="4" class="tc-input" data-ph-bn="যেমন: আমি পড়াশোনার পাশাপাশি পার্ট-টাইম কাজ শিখতে চাই..." data-ph-en="e.g. I want to learn part-time work alongside my studies..."></textarea>
+      </div>
+
+      <div class="sm:col-span-2">
+        <label class="flex items-start gap-3 text-xs text-ink-400">
+          <input required type="checkbox" class="mt-0.5 w-4 h-4 accent-brand-600">
+          <span data-bn="আমি নিশ্চিত করছি যে উপরের সব তথ্য সঠিক এবং টেক কেয়ারের ভর্তি নীতিমালা মেনে চলতে সম্মত আছি।"
+                data-en="I confirm the information above is correct and that I agree to follow the Tech Care admission policy."></span>
+        </label>
+      </div>
+
+      <div class="sm:col-span-2 flex flex-col sm:flex-row gap-3">
+        <button type="submit" class="flex-1 rounded-full bg-brand-600 py-3.5 font-semibold text-white hover:bg-brand-700 transition"
+                data-bn="আবেদন জমা দিন" data-en="Submit Application"></button>
+        <a href="tel:+8801700000000" class="rounded-full border border-black/15 px-7 py-3.5 font-semibold text-ink text-center hover:border-brand-600 hover:text-brand-600 transition"
+           data-bn="কল করে ভর্তি হোন" data-en="Admit by phone"></a>
+      </div>
+    </form>
+
+    <!-- sidebar -->
+    <aside class="space-y-5">
+      <div class="reveal rounded-2xl bg-ink text-white p-7">
+        <h3 class="font-bold" data-bn="ভর্তি প্রক্রিয়া" data-en="Admission steps"></h3>
+        <ol class="mt-5 space-y-5 text-sm">
+          <li class="flex gap-4">
+            <span class="grid place-items-center w-8 h-8 shrink-0 rounded-lg bg-brand-600 font-bold">1</span>
+            <span data-bn="অনলাইন ফরম পূরণ করা" data-en="Complete the online form"></span>
+          </li>
+          <li class="flex gap-4">
+            <span class="grid place-items-center w-8 h-8 shrink-0 rounded-lg bg-brand-600 font-bold">2</span>
+            <span data-bn="কাউন্সিলরের কল ও কোর্স কাউন্সিলিং" data-en="Counselor call and course counseling"></span>
+          </li>
+          <li class="flex gap-4">
+            <span class="grid place-items-center w-8 h-8 shrink-0 rounded-lg bg-brand-600 font-bold">3</span>
+            <span data-bn="সেন্টারে এসে রেজিস্ট্রেশন ও ফি পরিশোধ" data-en="Register at the center and pay the fee"></span>
+          </li>
+          <li class="flex gap-4">
+            <span class="grid place-items-center w-8 h-8 shrink-0 rounded-lg bg-brand-600 font-bold">4</span>
+            <span data-bn="আইডি কার্ড ও ক্লাস রুটিন সংগ্রহ" data-en="Collect ID card and class routine"></span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="reveal rounded-2xl border border-black/10 bg-white p-7">
+        <h3 class="font-bold text-ink" data-bn="ফি ও ছাড়" data-en="Fees and discounts"></h3>
+        <ul class="mt-4 space-y-3 text-sm text-ink-600">
+          <li class="flex items-start gap-3"><span class="text-brand-600 mt-0.5">◆</span><span data-bn="ভর্তির সময় ৫০% পরিশোধ, বাকিটা দুই কিস্তিতে।" data-en="Pay 50% at admission, the rest in two instalments."></span></li>
+          <li class="flex items-start gap-3"><span class="text-brand-600 mt-0.5">◆</span><span data-bn="কম্বো প্যাকেজে ২৫% পর্যন্ত ছাড়।" data-en="Up to 25% off on combo packages."></span></li>
+          <li class="flex items-start gap-3"><span class="text-brand-600 mt-0.5">◆</span><span data-bn="একই পরিবারের দ্বিতীয় শিক্ষার্থীর জন্য বিশেষ ছাড়।" data-en="Special discount for a second learner from the same family."></span></li>
+          <li class="flex items-start gap-3"><span class="text-brand-600 mt-0.5">◆</span><span data-bn="সেমিনার অ্যাসেসমেন্টে আংশিক স্কলারশিপ।" data-en="Partial scholarship through the seminar assessment."></span></li>
+        </ul>
+      </div>
+
+      <div class="reveal rounded-2xl bg-brand-600 text-white p-7">
+        <h3 class="font-bold" data-bn="সরাসরি কথা বলতে চান?" data-en="Prefer to talk directly?"></h3>
+        <p class="mt-2 text-sm text-white/85 leading-relaxed" data-bn="কর্মদিবসে সকাল ৯টা থেকে রাত ৮টা পর্যন্ত আমাদের কাউন্সিলর ফোনে আছেন।" data-en="Our counselors are available by phone from 9 AM to 8 PM on working days."></p>
+        <a href="tel:+8801700000000" class="mt-4 block rounded-full bg-white py-3 text-center font-semibold text-brand-700 hover:bg-black hover:text-white transition">+880 1700-000000</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

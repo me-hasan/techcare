@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>কোর্সসমূহ | Courses – টেক কেয়ার Tech Care</title>
+<meta name="description" content="Tech Care course list — mobile software, hardware, chip level, computer fundamental, business startup and certified professional programs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tailwind.config.js"></script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-ink antialiased">
+
+<div id="site-header"></div>
+
+<!-- ============ PAGE HEAD ============ -->
+<section class="relative bg-ink text-white overflow-hidden">
+  <div class="absolute inset-0 bg-grid opacity-70"></div>
+  <div class="absolute -top-28 right-0 w-96 h-96 rounded-full bg-brand-600/25 blur-3xl"></div>
+  <div class="relative container mx-auto max-w-8xl px-4 lg:px-8 py-14 lg:py-20">
+    <nav class="flex items-center gap-2 text-xs text-white/50">
+      <a href="index.html" class="hover:text-brand-400" data-bn="হোম" data-en="Home"></a>
+      <span>/</span>
+      <span class="text-white/80" data-bn="কোর্সসমূহ" data-en="Courses"></span>
+    </nav>
+    <h1 class="mt-5 text-3xl lg:text-5xl font-extrabold" data-bn="আমাদের কোর্সসমূহ" data-en="Our Courses"></h1>
+    <p class="mt-4 text-white/65 max-w-2xl leading-relaxed"
+       data-bn="বেসিক থেকে অ্যাডভান্সড—আপনার লক্ষ্য অনুযায়ী কোর্স বেছে নিন। প্রতিটি কোর্সেই হাতে-কলমে ল্যাব প্র্যাকটিস, ছোট ব্যাচ ও কোর্স শেষে অ্যাসেসমেন্ট অন্তর্ভুক্ত।"
+       data-en="From basic to advanced — pick the course that matches your goal. Every course includes hands-on lab practice, small batches and a final assessment."></p>
+
+    <div class="mt-8 flex flex-wrap gap-x-10 gap-y-4 text-sm">
+      <div><p class="text-white/45 text-xs uppercase tracking-wide" data-bn="মোট কোর্স" data-en="Total Courses"></p><p class="font-bold text-lg">8</p></div>
+      <div><p class="text-white/45 text-xs uppercase tracking-wide" data-bn="ক্লাস স্লট" data-en="Class Slots"></p><p class="font-bold text-lg" data-bn="৩টি (সকাল/দুপুর/সন্ধ্যা)" data-en="3 (Morning/Noon/Evening)"></p></div>
+      <div><p class="text-white/45 text-xs uppercase tracking-wide" data-bn="সর্বোচ্চ ব্যাচ সাইজ" data-en="Max Batch Size"></p><p class="font-bold text-lg" data-bn="১৫ জন" data-en="15 learners"></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILTER + LIST ============ -->
+<section class="py-16 lg:py-20">
+  <div class="container mx-auto max-w-8xl px-4 lg:px-8">
+
+    <div class="flex flex-wrap items-center justify-center gap-3">
+      <button type="button" data-filter="all" class="filter-btn is-on rounded-full px-5 py-2.5 text-sm font-semibold" data-bn="সব কোর্স" data-en="All Courses"></button>
+      <button type="button" data-filter="software" class="filter-btn rounded-full px-5 py-2.5 text-sm font-semibold" data-bn="সফটওয়্যার" data-en="Software"></button>
+      <button type="button" data-filter="hardware" class="filter-btn rounded-full px-5 py-2.5 text-sm font-semibold" data-bn="হার্ডওয়্যার" data-en="Hardware"></button>
+      <button type="button" data-filter="computer" class="filter-btn rounded-full px-5 py-2.5 text-sm font-semibold" data-bn="কম্পিউটার" data-en="Computer"></button>
+      <button type="button" data-filter="business" class="filter-btn rounded-full px-5 py-2.5 text-sm font-semibold" data-bn="ব্যবসা" data-en="Business"></button>
+      <button type="button" data-filter="combo" class="filter-btn rounded-full px-5 py-2.5 text-sm font-semibold" data-bn="কম্বো প্যাকেজ" data-en="Combo Package"></button>
+    </div>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-courses data-cat="all"></div>
+
+    <!-- fee notes -->
+    <div class="mt-14 grid gap-6 lg:grid-cols-3">
+      <div class="rounded-2xl border border-black/10 bg-white p-6">
+        <h3 class="font-bold text-ink" data-bn="ফি সংক্রান্ত তথ্য" data-en="About the fees"></h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed"
+           data-bn="ভর্তির সময় ৫০% পরিশোধ করে বাকি টাকা দুই কিস্তিতে দেওয়া যায়। কম্বো প্যাকেজে একসাথে ভর্তি হলে ২৫% পর্যন্ত ছাড় পাওয়া যায়।"
+           data-en="Pay 50% at admission and the remainder in two instalments. Combo enrolment gets up to 25% off."></p>
+      </div>
+      <div class="rounded-2xl border border-black/10 bg-white p-6">
+        <h3 class="font-bold text-ink" data-bn="যা যা সবসময় অন্তর্ভুক্ত" data-en="Always included"></h3>
+        <p class="mt-2 text-sm text-ink-400 leading-relaxed"
+           data-bn="প্র্যাকটিস ডিভাইস, টুলস ব্যবহার, ফার্মওয়্যার আর্কাইভ অ্যাক্সেস, রিভিশন ক্লাস এবং কোর্স শেষে সার্টিফিকেট।"
+           data-en="Practice devices, tool usage, firmware archive access, revision classes and a certificate at the end."></p>
+      </div>
+      <div class="rounded-2xl bg-brand-600 p-6 text-white">
+        <h3 class="font-bold" data-bn="কোন কোর্সটি নেবেন বুঝতে পারছেন না?" data-en="Not sure which course fits you?"></h3>
+        <p class="mt-2 text-sm text-white/85 leading-relaxed"
+           data-bn="আমাদের কাউন্সিলরকে আপনার পটভূমি ও লক্ষ্য জানান—তিনি সঠিক কোর্সটি বেছে নিতে সাহায্য করবেন।"
+           data-en="Tell our counselor your background and goal — they will help you pick the right course."></p>
+        <a href="contact.html" class="mt-4 inline-flex rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-brand-700 hover:bg-black hover:text-white transition"
+           data-bn="ফ্রি কাউন্সিলিং নিন" data-en="Get free counseling"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.querySelector('[data-courses]');
+  var buttons = document.querySelectorAll('[data-filter]');
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('is-on'); });
+      btn.classList.add('is-on');
+      box.setAttribute('data-cat', btn.getAttribute('data-filter'));
+      renderCourses('[data-courses]');
+      watchReveals();
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+/* =========================================================
+   Tech Care – custom styles on top of Tailwind
+   Palette: red (#e11d2e), black (#0a0a0b), white
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bengali text renders taller — give it a bit more breathing room */
+html[lang='bn'] body {
+  font-family: 'Hind Siliguri', 'Inter', system-ui, sans-serif;
+  line-height: 1.75;
+}
+
+/* Offset for sticky header when jumping to an anchor */
+section[id],
+div[id^='anchor-'] {
+  scroll-margin-top: 96px;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #e11d2e;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bd1425;
+}
+
+/* ---------- Utilities ---------- */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-stroke-brand {
+  -webkit-text-stroke: 1.5px #e11d2e;
+  color: transparent;
+}
+
+/* Subtle grid pattern used behind dark sections */
+.bg-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+.bg-dots {
+  background-image: radial-gradient(rgba(225, 29, 46, 0.28) 1.4px, transparent 1.4px);
+  background-size: 18px 18px;
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Cards ---------- */
+.tc-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.tc-card:hover {
+  transform: translateY(-6px);
+  border-color: #e11d2e;
+  box-shadow: 0 22px 48px -22px rgba(225, 29, 46, 0.45);
+}
+
+/* Red underline animation for nav links */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: #e11d2e;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  width: 100%;
+}
+
+/* Language switch */
+.lang-btn.is-active {
+  background: #e11d2e;
+  color: #fff;
+}
+
+/* Course category filter */
+.filter-btn {
+  border: 1px solid rgba(10, 10, 11, 0.14);
+  background: #fff;
+  color: #2c2c33;
+  transition: all 0.25s ease;
+}
+.filter-btn:hover {
+  border-color: #e11d2e;
+  color: #e11d2e;
+}
+.filter-btn.is-on {
+  background: #e11d2e;
+  border-color: #e11d2e;
+  color: #fff;
+}
+
+/* Testimonial carousel */
+.snap-row {
+  scroll-snap-type: x mandatory;
+}
+.snap-item {
+  scroll-snap-align: start;
+}
+
+/* Home image slider */
+.tc-slide {
+  opacity: 0;
+  transform: scale(1.04);
+  pointer-events: none;
+  transition: opacity 0.7s ease, transform 6s linear;
+}
+.tc-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  z-index: 1;
+}
+.tc-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  transition: all 0.3s ease;
+}
+.tc-dot.is-active {
+  width: 30px;
+  background: #e11d2e;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tc-slide {
+    transition: opacity 0.3s ease;
+    transform: none;
+  }
+}
+
+/* Accordion (FAQ / syllabus) */
+.acc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.acc-item.open .acc-body {
+  max-height: 640px;
+}
+.acc-item.open .acc-icon {
+  transform: rotate(45deg);
+}
+
+/* Form controls */
+.tc-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e7;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.tc-input:focus {
+  border-color: #e11d2e;
+  box-shadow: 0 0 0 4px rgba(225, 29, 46, 0.12);
+}
+.tc-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #1f1f24;
+}
